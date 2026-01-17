@@ -17,7 +17,8 @@ print(type(my_float))
 # Строка / string / str
 my_str_1 = 'Hello world'
 my_str_2 = "hello world!"
-my_str_3 = '''hello friend'''
+my_str_3 = '''hello
+friend'''
 print(type(my_str_1))
 
 # Список / list
