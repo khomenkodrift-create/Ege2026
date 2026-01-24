@@ -12,3 +12,5 @@
 #       01234567891011....
 data = 'hello world!'
 print(data[1:7])
+
+123
