@@ -8,4 +8,12 @@ def convert(num, sys):
     return res[::-1]
 
 for N in range(1, 100_000):
-    if
+    if N % 5 == 0:
+        R = convert(N, 5)
+        R =  '33' + R.replace('1', '4'), R.replace('4', '1')
+    else:
+        R = R.replace([0,0], 3) + 42
+    if R > 1922:
+        ans.append(N)
+
+print(min(ans))
