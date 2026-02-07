@@ -5,7 +5,7 @@ lt(90)
 screensize(5000, 5000)
 tracer(False)
 
-m = 15
+m = 10
 
 for i in range(3):
     fd(39*m)
@@ -30,5 +30,12 @@ for i in range(3):
 
 up()
 
-for x in range(-10, 10):
-    for y in range(-10, 10):
+for x in range(0, 90):
+    for y in range(-10, 15):
+        goto(x * m, y * m)
+        dot(3, 'red')
+
+update()
+
+
+print(40*49+(30*19 - 14*20)) #2250
