@@ -1,51 +1,12 @@
-def find_base():
-    """
-    Находит основание системы счисления N, удовлетворяющее условиям:
-    41 в системе с основанием N оканчивается на 2
-    131 в системе с основанием N оканчивается на 1
-    """
-    results = []
+from string import printable
 
-    # Перебираем возможные основания (должно быть больше максимальной цифры 2)
-    for N in range(3, 100):  # Ограничим сверху для практичности
-        if 41 % N == 2 and 131 % N == 1:
-            results.append(N)
+def convert(num, sys):
+    res = ''
+    while num:
+        res += printable[num % sys]
+        num //= sys
+    return res[::-1]
 
-    return results
-
-
-# Находим решение
-bases = find_base()
-
-print("Задача: В системе счисления с основанием N запись числа 41(10) оканчивается на 2,"
-      "\nа запись числа 131(10) на 1. Чему равно число N?\n")
-
-print("Математическая интерпретация:")
-print("41 mod N = 2")
-print("131 mod N = 1")
-print("N > 2 (так как есть цифра 2)\n")
-
-print("Решение методом перебора:")
-for N in bases:
-    print(f"\nПроверка N = {N}:")
-    print(f"41 mod {N} = {41 % N} (нужно 2) - {'✓' if 41 % N == 2 else '✗'}")
-    print(f"131 mod {N} = {131 % N} (нужно 1) - {'✓' if 131 % N == 1 else '✗'}")
-
-
-    # Дополнительная проверка: перевод чисел в систему с основанием N
-    def to_base(num, base):
-        """Переводит число в систему счисления с основанием base"""
-        digits = []
-        n = num
-        while n > 0:
-            digits.append(str(n % base))
-            n //= base
-        return ''.join(reversed(digits)) if digits else '0'
-
-
-    print(f"41 в системе с основанием {N} = {to_base(41, N)}")
-    print(f"131 в системе с основанием {N} = {to_base(131, N)}")
-
-print(f"\nИтоговый ответ: N = {bases[0]}")
-
-#????
+for N in range(2, 37):
+    if convert(41, N)[-1] == '2' and convert(131, N)[-1] == '1':
+        print(N)
