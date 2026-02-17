@@ -83,3 +83,5 @@ print(ans[0])
 ans.append([R, N])
 ans = sorted(ans,key=lambda x: (x[0], -x[1]))
 print(ans[0])
+
+# при N больше n берем на 1 больше
