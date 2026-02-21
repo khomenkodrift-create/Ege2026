@@ -28,7 +28,7 @@ print(f'{num:x}')
 #     while num: # можно не писать != 0, тк только тру и фолс понимает, а когда 0 = фолс
 #         res += str(num % sys)
 #         num //= sys
-#     return res[::-1]
+#     return res[::-1] if res else '0'
 
 # print(convert(20, 2))
 #
@@ -42,7 +42,7 @@ def convert(num, sys):
     while num: # можно не писать != 0, тк только тру и фолс понимает, а когда 0 = фолс
         res += printable[num % sys]
         num //= sys
-    return res[::-1]
+    return res[::-1] if res else '0'
 
 # Полезные алгоритмы
 # Сумма цифр двоичной системы
@@ -85,3 +85,4 @@ ans = sorted(ans,key=lambda x: (x[0], -x[1]))
 print(ans[0])
 
 # при N больше n берем на 1 больше
+# младший разряд - [-1] (самая правая цифра в числе)
