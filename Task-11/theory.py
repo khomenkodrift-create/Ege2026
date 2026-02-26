@@ -23,3 +23,4 @@ for N in range(1, 10**6):
     if 356_984 * I >= 54 * 2 ** 20:
         print(N)
         break
+
