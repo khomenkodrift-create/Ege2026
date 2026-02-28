@@ -10,4 +10,3 @@ for x in range(42):
     num = num1 + num2
     if num % 155 == 0:
         print(num // 155)
-
