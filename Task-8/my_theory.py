@@ -9,4 +9,3 @@
 #        for i in printable[1:16:2]:
 #            val = val.replace(i, '_')
 #        if '**' not in val and '__' not in val:
-
