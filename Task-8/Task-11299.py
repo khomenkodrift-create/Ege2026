@@ -1,4 +1,4 @@
-from itertools import product, repeat
+from itertools import product
 ans = []
 alph = sorted('БМЮРН')
 for pos , val in enumerate(product(alph, repeat=6), start = 1):
