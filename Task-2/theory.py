@@ -18,3 +18,19 @@
 # 8. not
 # 9. and
 # 10. or
+
+# Решение через лесенку
+# print('a b c d')
+# for a in range(2):
+#     for b in (0, 1):
+#         for c in [0, 1]:
+#             for d in 0, 1:
+#                 f = (not a and not b) or (b == c) or d
+#                 # Все строки истинны
+#                 if f:
+#                     print(a, b, c, d)
+#                 # Все строки ложны
+#                 if not f:
+#                     print(a, b, c, d)
+#                 # Строки вперемешку
+#                 print(a, b, c, d)
