@@ -1,7 +1,7 @@
 from itertools import product, permutations
 
 def f(w,x,y,z):
-    return (x and not y) or (y == z)  not w
+    return (x and not y) or (y == z) or not w
 
 
 for x1, x2, x3, x4, x5 in product([0, 1], repeat=5):
