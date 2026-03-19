@@ -34,3 +34,40 @@
 #                     print(a, b, c, d)
 #                 # Строки вперемешку
 #                 print(a, b, c, d)
+
+# args - * - позволяет распаковать элементы списка в переменные внутри функции по порядку
+# первое значение в первую переменную, второе во вторую и т.д.
+def f1(a, b, c):
+    return a + b + c
+
+test1 = [1, 2, 3]
+print(f1(*test1))
+
+# kwargs - ** - позволяет распаковать элементы словаря в переменные внутри функции по названию ключей
+def f2(a, b):
+    return a / b
+
+test2 = {'b': 2, 'a': 1}
+print(f2(**test2))
+
+# Автокод
+from itertools import product, permutations
+
+def f(x, y, z, w):
+    return (x or y) and not (y == z) and not w
+
+for i in product((0, 1), repeat=4):
+    table = [
+        (1, i[0], 1, i[1], 1),
+        (0, 1, i[2], 0, 1),
+        (i[3], 1, 1, 0, 1)
+    ]
+    if len(set(table)) == len(table):
+        for p in permutations('xyzw'):
+            # zip(p, t) - сопоставляет заголовки из p c значениями из t;
+            # dict(zip(p, t)) - преобразует zip объект в базовый тип данных (словарь);
+            # f(**dict(zip(p, t))) - распаковывает через kwargs все ключи в функцию;
+            # f(**dict(zip(p, t))) == t[-1] - сравнивает результат функции с результатом из условия;
+            # all(...) - требует, чтобы все строки совпали со значениями из условия
+            if all(f(**dict(zip(p, t))) == t[-1] for t in table):
+                print(*p, sep='')
