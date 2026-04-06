@@ -6,4 +6,6 @@ def f(x, s):
          f(x // 3, s - 1)
          ]
     return any(h) if (s - 1) % 2 == 0 else all(h)
-print('19)', [x for x in range(11, ) if f(x, )])
+print('19)', [x for x in range(12, 37) if f(x, 2)])
+print('20)', [x for x in range(37, 41) if f(x, 3) and not f(x, 1)])
+print('21)', [x for x in range(41, 43) if f(x, 4) and not f(x, 1)])
