@@ -1,12 +1,11 @@
-from itertools import product, repeat
-from string import printable
+from itertools import permutations
 cnt = 0
-for val in product(printable[:8], repeat=6):
-    val = ''.join(val)
-    if val[0] != 0 and '3' not in val and len(val) == len(set(val)):
-        for i in '02468':
-            val = val.replace(i, '*')
-        if '**' in val:
+for val in permutations('0124567', r=6): #тк не содержит 3 - 0124567
+    if val[0] != '0' :
+        val = ''.join(val)
+        i = val #тк В процессе замен строка i меняется, а исходная val остается для сравнения, если потребуется
+        for m in '0246':
+            i = i.replace(m, '*')
+        if '**' in i:
             cnt += 1
-
 print(cnt)
