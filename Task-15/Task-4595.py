@@ -1,5 +1,5 @@
 def DEL(n, m):
-    return n % m ==0
+    return n % m == 0
 def f(x):
     return (DEL(x, 2) <= (not DEL(x, 3))) or (x + A >= 80)
 
