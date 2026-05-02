@@ -15,3 +15,7 @@
 #print(len(bin(2047)))
 #print(int(0b100000000000))
 #2048
+
+#25025
+print(bin(992))
+print(int(0b1010111111))
