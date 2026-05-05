@@ -23,3 +23,4 @@ for N in range(10, 10000):
         cnt += 1
 print(cnt)
 
+fgadf

@@ -19,4 +19,4 @@ for N in range(1, 100_000):
     R = int(R, 5)
     if R > 50:
         ans.append(N)
-print(min(ans))
+print(min(ans))asdad

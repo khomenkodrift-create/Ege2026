@@ -9,4 +9,4 @@ for val in product(alph, repeat=6):
         cnt += 1
 print(cnt)
 
-#ПРОВЕРИТЬ + ЗАПУШИТЬ(NO INTERNET COS OF PIDORS)
+#ПРОВЕРИТЬ + ЗАПУШИТЬ(NO INTERNET COS OF PIDORS)asdad
