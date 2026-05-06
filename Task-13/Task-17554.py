@@ -6,4 +6,4 @@ for ip in net:
     ip = f'{int(ip):032b}'
     if ip.count('1') % 3 != 0:
         cnt += 1
-print(cnt)asdas
+print(cnt)

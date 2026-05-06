@@ -8,5 +8,3 @@ for val in product(alph, repeat=6):
     if val.count('2') == 1 and val.count('6') == 1:
         cnt += 1
 print(cnt)
-
-#ПРОВЕРИТЬ + ЗАПУШИТЬ(NO INTERNET COS OF PIDORS)asdad
