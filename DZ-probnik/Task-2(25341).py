@@ -1,6 +1,5 @@
 from itertools import permutations, product, repeat
 
-
 def f(w, x, y, z):
     return (w == z) or not(y <= w) or not x
 
