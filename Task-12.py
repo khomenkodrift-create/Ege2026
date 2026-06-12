@@ -34,4 +34,5 @@
 # print(int(0b001101111)) #111
 
 
-hhdhdhd
+#print(bin(4087))
+#print(int(0b111111101))

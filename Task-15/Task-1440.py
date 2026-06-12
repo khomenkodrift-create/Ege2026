@@ -14,5 +14,4 @@ ans = []
 for A1, A2 in combinations(lineA, 2):
     if all(f(x) for x in lineX):
         ans.append(A2 - A1)
-
 print(min(ans))
