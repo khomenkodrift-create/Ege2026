@@ -36,3 +36,6 @@
 
 #print(bin(4087))
 #print(int(0b111111101))
+
+#print(bin(800))
+#print(int(0b1000100000))
