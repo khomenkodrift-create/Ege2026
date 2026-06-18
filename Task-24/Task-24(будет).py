@@ -67,3 +67,17 @@ number = r'([1-9][0-9])*|0'
 pattern = rf'({number}([+*{number}])+'
 matches = [match.group() for match in finditer(pattern, data)]
 print(len(max(matches, key=len)))
+
+from re import finditer
+
+with open() as file:
+    data = file.readline()
+
+number = r'([1-9][0-9]*|0)'
+number = r'([1-9][0-9]*|0)'
+pattern = rf'({number}(+*{number}))+'
+pattern = rf'({number}(+*{number}))+'
+matches = [match.group() for match in finditer(pattern, data)]
+matches = [match.group() for match in finditer(pattern, data)]
+print(len(max(matches, key=len)))
+print(len(max(matches, key=len)))
